@@ -2,6 +2,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Actor&family=Open+Sans:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
 
+@font-face {
+	font-family: 'ProximaNova';
+	font-weight: 400;
+	src: url("../fonts/ProximaNova/proximanova_regular.ttf");
+}
+
+@font-face {
+	font-family: 'ProximaNova';
+	font-weight: 700;
+	src: url("../fonts/ProximaNova/proximanova_bold.otf");
+}
 /* font-family: 'Actor', sans-serif;
 font-family: 'Roboto', sans-serif; 
 font-family: 'Open Sans', sans-serif;
@@ -10,7 +21,7 @@ font-family: 'Open Sans', sans-serif;
 body {
 	margin: 0;
 
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'ProximaNova', sans-serif;
 	font-weight: 400;
 	font-size: 14px;
 	color: #000;
@@ -87,6 +98,7 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
 }
 .nav__item {
 	font-size: 16px;
+	line-height: 1.5;
 	font-weight: 400;
 
 	text-decoration: none;
@@ -136,6 +148,7 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
 
 	font-weight: 500;
 	font-size: 16px;
+	line-height: 1.5;
 	color: #ffffff;
 
 	background-color: #1B213A;
@@ -186,8 +199,7 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
 .intro {
 	padding-top: 108px;
 	width: 100%;
-	/* height: 100vh; */
-	height: calc(100vh - 108px);
+	padding-bottom: 100px;
 
 	background-color: #A6D2E2;
 }
@@ -216,6 +228,7 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
 
 	font-weight: 400;
 	font-size: 70px;
+	line-height: 1.2;
 }
 
 .intro__info__text {
@@ -298,10 +311,11 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
 /* ------------ Options ------------ */
 .options__title {
 	margin-top: 172px;
-	margin-bottom: 92px;
+	margin-bottom: 54px;
 
 	font-weight: 700;
-	font-size: 24px;
+	font-size: 50px;
+	line-height: 2;
 
 	text-align: center;
 }
@@ -324,24 +338,27 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
 	max-width: 96px;
 	max-height: 73px;
 
-	margin-bottom: 12px;
+	margin-bottom: 32px;
 }
 
 .options__item__title {
 	font-weight: 700;
+	font-size: 38px;
+	line-height: 1.5;
+
 	font-size: 24px;
 	color: #1B213A;
 
-	margin-bottom: 12px;
+	margin-bottom: 14px;
 }
 
 .options__item__text {
 	color: #666;
 	font-style: 16px;
 	text-align: center;
-	line-height: 1.5;
+	line-height: 1.75;
 
-	margin-bottom: 12px;
+	margin-bottom: 32px;
 }
 
 .blue__btn.options {
@@ -356,7 +373,7 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
 }
 /* ------------ Connection ------------ */
 .connection {
-	margin-bottom: 48px;
+	margin-bottom: 136px;
 }
 .connection__items {
 	width: 100%;
@@ -382,25 +399,27 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
 
 .connection__item__title {
 	font-weight: 700;
-	font-size: 38px;
-	margin-bottom: 18px;
+	font-size: 50px;
+	line-height: 1.2;
+	margin-bottom: 24px;
 }
 
 .connection__item__text {
 	color: #666;
 	font-size: 16px;
-	line-height: 1.5;
+	line-height: 1.75;
 
-	margin-bottom: 24px;
+	margin-bottom: 48px;
 }
 
 /* ------------ Residences ------------ */
 .residences {
-	margin-bottom: 192px;
+	margin-bottom: 204px;
 }
 .residences__title {
 	font-weight: 700;
-	font-size: 38px;
+	font-size: 50px;
+	line-height: 1.2;
 	margin-bottom: 18px;
 
 	text-align: center;
@@ -409,9 +428,9 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
 .residences__description {
 	color: #666;
 	font-size: 16px;
-	line-height: 1.5;
+	line-height: 1.75;
 
-	margin-bottom: 24px;
+	margin-bottom: 34px;
 	text-align: center;
 
 	max-width: 624px;
@@ -444,7 +463,8 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
 }
 .residences__item__title {
 	padding-top: 8px;
-	font-size: 18px;
+	font-size: 20px;
+	line-height: 1.1;
 	font-weight: 700;
 }
 .residences__item__title::after {
@@ -485,7 +505,7 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
 
 /* ------------ Value ------------ */
 .value {
-	margin-bottom: 180px;
+	margin-bottom: 90px;
 }
 .value__wrapper {
 	display: flex;
@@ -500,8 +520,13 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
 .value__picture {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	/* align-items: center; */
+	/* margin-right: auto;
+	margin-left: auto; */
 	width: 44%;
+}
+.value__picture__img {
+	max-height: 417px;
 }
 .value__info__title {
 	font-weight: 700;
@@ -641,6 +666,11 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
 	line-height: 1.5;
 
 	margin-bottom: 48px;
+}
+.intro__info__form.upgrade {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
 }
 .intro__info__search.upgrade {
 	background-image: none;
