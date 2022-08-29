@@ -1,0 +1,102 @@
+
+
+body {
+	margin: 0;
+
+	font-family: 'ProximaNova', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	color: #fff;
+
+	box-sizing: border-box;
+
+	/*данное свойство сглаживает шрифты*/
+	-webkit-font-smoothing: antialiased;
+
+	background-color: #1A1A1A;
+
+}
+h1,h2,h3,h4,h5,h6,p,td,tr {
+	margin: 0;
+	padding: 0;
+}
+
+/* ------------------- Header ------------------- */
+.header {
+    padding: 48px 64px;
+    /* max-width: 1312px; */
+
+    /* background-color: #1A1A1A; */
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1312px;
+}
+
+.header__inner__logo {
+    margin-right: 224px;
+}
+
+.header__inner__nav {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.nav__link {
+    text-decoration: none;
+    color: #8c8c8c;
+    text-transform: uppercase;
+
+    transition: color 0.1s linear;
+}
+
+.nav__link:hover {
+    color: #fff;
+}
+
+.header__inner__register {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 152px;
+    color: #8c8c8c;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    margin-right: 12px;
+    position: relative;
+}
+
+.header__inner__register:hover{
+    color: #fff;
+}
+
+
+/* ------------------- Intro ------------------- */
+.intro__title {
+    position: absolute;
+width: 1312px;
+height: 141px;
+left: 64px;
+top: 186px;
+
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 800;
+font-size: 120px;
+line-height: 141px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: 1px;
+
+background: linear-gradient(90.01deg, #FFFFFF 0.01%, rgba(255, 255, 255, 0.3) 49.48%, #FFFFFF 99.99%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+}
