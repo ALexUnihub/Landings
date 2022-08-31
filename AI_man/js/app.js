@@ -1,6 +1,7 @@
 'use strict'
 
 initializeSlider();
+addReviews()
 
 let techMenuTitles = document.querySelectorAll(".tech__menu__title");
 
@@ -83,5 +84,37 @@ function initializeSlider() {
     for (let item of items) {
         item.style.marginLeft = idx * 320 + 'px';
         idx++;
+    }
+}
+
+// reviews
+function addReviews() {
+    document.querySelector(".reviews").querySelector(".left").addEventListener('click', moveLeftReviews);
+    document.querySelector(".reviews").querySelector(".right").addEventListener('click', moveRightReviews);
+}
+
+function moveLeftReviews(event) {
+    let reviewsBlock = document.querySelector(".reviews");
+    let currReview = parseInt(reviewsBlock.querySelector(".review__text").dataset.id);
+    if (currReview > 0) {
+        currReview--;
+        reviewsBlock.querySelector(".review__text").remove();
+        reviewsBlock.querySelector(".review__reviewer").remove();
+
+        reviewsBlock.querySelector(".reviews__title").insertAdjacentHTML("afterend", reviewsArray[currReview][0]);
+        reviewsBlock.querySelector(".left").insertAdjacentHTML("afterend", reviewsArray[currReview][1]);
+    }
+}
+
+function moveRightReviews(event) {
+    let reviewsBlock = document.querySelector(".reviews");
+    let currReview = parseInt(reviewsBlock.querySelector(".review__text").dataset.id);
+    if (currReview < reviewsArray.length - 1) {
+        currReview++;
+        reviewsBlock.querySelector(".review__text").remove();
+        reviewsBlock.querySelector(".review__reviewer").remove();
+
+        reviewsBlock.querySelector(".reviews__title").insertAdjacentHTML("afterend", reviewsArray[currReview][0]);
+        reviewsBlock.querySelector(".left").insertAdjacentHTML("afterend", reviewsArray[currReview][1]);
     }
 }
