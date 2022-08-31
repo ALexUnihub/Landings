@@ -1,8 +1,8 @@
 'use strict'
 
-let techMenu = document.querySelectorAll(".tech__menu__title");
+let techMenuTitles = document.querySelectorAll(".tech__menu__title");
 
-for (let item of techMenu) {
+for (let item of techMenuTitles) {
     item.addEventListener('mouseover', enterElem);
     item.addEventListener('mouseout', leaveElem);
     item.addEventListener('click', chooseElem);
@@ -26,5 +26,36 @@ function chooseElem(event) {
         chosenElem.classList.remove("active");
     }
     event.currentTarget.classList.add("active");
+    document.querySelector(".tech__item").remove();
+
+    let itemName = event.currentTarget.textContent;
+
+    document.querySelector(".tech__menu").insertAdjacentHTML('afterend', itemsMap.get(itemName));
 }
 
+// ticker animation:
+
+// let tickerDiv = document.querySelector(".discount");
+// tickerDiv.addEventListener('mouseover', enterTicker);
+// tickerDiv.addEventListener('mouseout', leaveTicker);
+
+// function enterTicker(event) {
+//     if (!event.currentTarget.classList.contains("active")) {
+//         event.currentTarget.classList.add("active");
+//         let tickerItems = event.currentTarget.querySelectorAll('.discount__line__text');
+//         for (let item of tickerItems) {
+//             item.classList.add("active");
+//         }
+//     }
+// }
+
+// function leaveTicker(event) {
+//     if (event.currentTarget.classList.contains("active")) {
+//         event.currentTarget.classList.remove("active");
+//         let tickerItems = event.currentTarget.querySelectorAll('.discount__line__text');
+//         for (let item of tickerItems) {
+
+//             item.classList.remove("active");
+//         }
+//     }
+// }

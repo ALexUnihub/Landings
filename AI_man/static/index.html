@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Man</title>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/animation.css">
 </head>
 <body>
 <!-- Header -->
@@ -23,7 +24,12 @@
         </div>
         <div class="register__wrapper">
             <a href="#" class="header__inner__register">REGISTER NOW</a>
-            <a href="#"><img src="../img/header/register_arrow.png" alt="reg__arrow"></a>    
+            <a href="#" class="header__inner__arrow"> 
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.70792 11.2915L11.0996 1.89983" stroke="#8c8c8c" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                    <path d="M1.70866 1.70817H11.292V11.2915" stroke="#8c8c8c" stroke-width="2" stroke-linecap="square"/>
+                </svg>
+            </a>    
         </div>
         
     </div>
@@ -79,13 +85,10 @@
 <!-- /Intro -->
 
 <!-- Discount line -->
-<div class="discount">
-
-    <div class="discount__line">
-        <img src="../img/discount/logo.png" alt="discountLogo" class="discount__logo">
-        <p class="discount__line__text">GET UP TO 20% DISCOUNT IF YOU REGISTER NOW</p>
-    </div>
-
+<div class="discount animated">
+    <p class="discount__line__text animated">GET UP TO 20% DISCOUNT IF YOU REGISTER NOW</p>
+    <p class="discount__line__text animated">GET UP TO 20% DISCOUNT IF YOU REGISTER NOW</p>
+    <p class="discount__line__text animated">GET UP TO 20% DISCOUNT IF YOU REGISTER NOW</p>
 </div>
 <!-- /Discount line -->
 
@@ -94,7 +97,14 @@
     <div class="container">
         <div class="tech__header">
             <h2 class="tech__title">OUR TECHNOLOGIES</h2>
-            <img src="../img/discount/register_arrow.png" alt="arrow" class="tech__logo">
+            <!-- <img src="../img/discount/register_arrow.png" alt="arrow" class="tech__logo"> -->
+            <a href="#" class="header__inner__arrow tech">
+                <svg width="51" height="51" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.70792 11.2915L11.0996 1.89983" stroke="#8c8c8c" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                    <path d="M1.70866 1.70817H11.292V11.2915" stroke="#8c8c8c" stroke-width="2" stroke-linecap="square"/>
+                </svg>
+            </a>
+            
         </div>
 
         <div class="tech__menu">
@@ -122,10 +132,119 @@
                 <img src="../img/tech/AI_pict.png" alt="AI_pict">
             </div>
         </div>
+
     </div>
 </div>
 <!-- /Tech -->
 
+<!-- Development -->
+<div class="dev">
+    <div class="container">
+        <h2 class="dev__title">THE DEVELOPMENT OF AI</h2>
+
+        <div class="dev__items">
+
+            <div class="dev__items__column">
+                <ul class="column">
+                    <li class="column__item left">
+                        <div class="column__item__wrapper">
+                            <h3 class="column__item__title">Annotate</h3>
+                            <p class="column__item__text">Annotate large volumes of 3D sensor, image, and video data.</p>
+                        </div>
+                    </li>
+                    <li class="column__item left">
+                        <div class="column__item__wrapper">
+                            <h3 class="column__item__title">Evaluate</h3>
+                            <p class="column__item__text">Quickly choose what data to label with active learning.</p>
+                        </div>
+                    </li>
+                    <li class="column__item left">
+                        <div class="column__item__wrapper">
+                            <h3 class="column__item__title">Collect</h3>
+                            <p class="column__item__text">Collect and generate, image representative device, video.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="dev__arrow__column">
+                <div class="arrow__wrapper">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.08301 25H48.9163" stroke="url(#paint0_linear_1767_10)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25 1.08301L48.9167 24.9997L25 48.9163" stroke="url(#paint1_linear_1767_10)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_1767_10" x1="50.6247" y1="25.9071" x2="50.5649" y2="23.6947" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#A7F306"/>
+                        <stop offset="1" stop-color="#F3CD06"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_1767_10" x1="49.7708" y1="44.4747" x2="14.1471" y2="30.7002" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#A7F306"/>
+                        <stop offset="1" stop-color="#F3CD06"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+                    <svg class="svg__rotated" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.08301 25H48.9163" stroke="url(#paint0_linear_1767_10)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25 1.08301L48.9167 24.9997L25 48.9163" stroke="url(#paint1_linear_1767_10)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_1767_10" x1="50.6247" y1="25.9071" x2="50.5649" y2="23.6947" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#A7F306"/>
+                        <stop offset="1" stop-color="#F3CD06"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_1767_10" x1="49.7708" y1="44.4747" x2="14.1471" y2="30.7002" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#A7F306"/>
+                        <stop offset="1" stop-color="#F3CD06"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.08301 25H48.9163" stroke="url(#paint0_linear_1767_10)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25 1.08301L48.9167 24.9997L25 48.9163" stroke="url(#paint1_linear_1767_10)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_1767_10" x1="50.6247" y1="25.9071" x2="50.5649" y2="23.6947" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#A7F306"/>
+                        <stop offset="1" stop-color="#F3CD06"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_1767_10" x1="49.7708" y1="44.4747" x2="14.1471" y2="30.7002" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#A7F306"/>
+                        <stop offset="1" stop-color="#F3CD06"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                
+                    
+            </div>
+
+            <div class="dev__items__column">
+                <ul class="column">
+                    <li class="column__item right">
+                        <div class="column__item__wrapper">
+                            <h3 class="column__item__title">Manage</h3>
+                            <p class="column__item__text">Retrieve human insights for search relevance, ecommerce.</p>
+                        </div>
+                    </li>
+                    <li class="column__item right">
+                        <div class="column__item__wrapper">
+                            <h3 class="column__item__title">Automate</h3>
+                            <p class="column__item__text">Achieve robust document understanding and extraction.</p>
+                        </div>
+                    </li>
+                    <li class="column__item right">
+                        <div class="column__item__wrapper">
+                            <h3 class="column__item__title">Generate</h3>
+                            <p class="column__item__text">Augment ground-truth training data with infinite varieties.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /Development -->
+
+<script src="../js/items.js"></script>
 <script src="../js/app.js"></script>
 </body>
 </html>

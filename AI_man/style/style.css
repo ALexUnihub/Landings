@@ -96,7 +96,15 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
 .header__inner__register:hover{
     color: #fff;
 }
-
+.header__inner__arrow:hover > svg > path {
+    stroke: #fff;
+}
+.header__inner__arrow.tech {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 92px;
+}
 
 /* ------------------- Intro ------------------- */
 .intro {
@@ -323,39 +331,49 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
 
 /* ------------------- Discount ------------------- */
 .discount {
-    display: flex;
+    /* width: 300%; */
+
+    display: flex;  
     align-items: center;
-    justify-content: center;
-    
+
     margin-bottom: 192px;
+    overflow: hidden;
 
     height: 120px;
     background: linear-gradient(307.72deg, #A7F306 2.04%, #F3CD06 98.59%);
 }
-.discount__line {
-    width: 1312px;
-    overflow: hidden;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin: 0 80px;
-}
-
-.discount__logo {
-    margin-right: 24px;
-}
 .discount__line__text {
+    /* width: 100%; */
+
     text-transform: uppercase;
     color: #000;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 36px;
     line-height: 2;
+
+    margin: 0 64px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    transform: translateX(-90%);
+}
+.discount__line__text::before {
+    content: "";
+    display: inline-block;
+    margin-right: 25px;
+
+    width: 61px;
+    height: 61px;
+
+    background: center no-repeat url("../img/discount/logo.png");
 }
 
 /* ------------------- Tech ------------------- */
+.tech {
+    margin-bottom: 160px;
+}
 .tech__header {
     display: flex;
     justify-content: space-between;
@@ -446,9 +464,8 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
 }
 
 .check__list {
-    list-style-image: url("../img/tech/list_icon.png");
-    
-    background-size: 40px;
+    padding: 0;
+    list-style: none;
 }
 .check__list__item {
     color: #fff;
@@ -456,4 +473,114 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
     line-height: 2;
 
     height: 48px;
+    display: flex;
+    align-items: center;
+}
+.check__list__item::before {
+    content: "";
+    display: inline-block;
+
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+    background: center no-repeat url("../img/tech/list_icon.png");
+}
+
+/* --------------------- Development --------------------- */
+.dev {
+    margin-bottom: 200px;
+}
+.dev__title {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 1.1;
+
+    margin-bottom: 96px;
+}
+.dev__items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dev__items__column {
+    /* width(container) = 1328px, width(arrowColumn) = 144px
+    => width(column) = {(1328 - 144) / (2 * 1328) * 100%} */
+    width: 44%;
+}
+.column {
+    list-style: none;
+}
+.column__item {
+    display: flex;
+    margin-bottom: 104px;
+}
+.column__item::before {
+    content: "";
+    display: inline-block;
+    width: 160px;
+    height: 180px;
+    margin-right: 40px;
+}
+.column__item.left:nth-child(1)::before {
+    background: no-repeat center url("../img/development/item_1.png");
+}
+.column__item.left:nth-child(2)::before {
+    background: no-repeat center url("../img/development/item_2.png");
+}
+.column__item.left:nth-child(3)::before {
+    background: no-repeat center url("../img/development/item_3.png");
+}
+.column__item.right:nth-child(1)::before {
+    background: no-repeat center url("../img/development/item_4.png");
+}
+.column__item.right:nth-child(2)::before {
+    background: no-repeat center url("../img/development/item_5.png");
+}
+.column__item.right:nth-child(3)::before {
+    background: no-repeat center url("../img/development/item_6.png");
+}
+.column__item__title {
+    margin: 30px 0 8px;
+    font-size: 24px;
+    line-height: 2;
+}
+.column__item__text {
+    font-size: 20px;
+    line-height: 2;
+    color: #8c8c8c;
+    max-width: 316px;
+}
+
+.dev__arrow__column {
+    /* width(container) = 1328px, width(arrowColumn) = 144px
+    => width(arrowColumn) = 144 / 1328 * 100% */
+    width: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dev__arrow__column::before {
+    content: "";
+    width: 1px;
+    height: 570px;
+    background-color: #313131;
+}
+.dev__arrow__column::after {
+    content: "";
+    width: 1px;
+    height: 570px;
+    background-color: #313131;
+}
+.arrow__wrapper {
+    height: 570px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.svg__rotated {
+    transform: rotate(180deg);
 }

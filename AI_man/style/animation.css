@@ -1,0 +1,12 @@
+.discount__line__text.animated {
+  animation: ticker 19s linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(-350%);
+  }
+}
