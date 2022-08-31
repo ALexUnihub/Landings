@@ -1,7 +1,7 @@
 'use strict'
 
 initializeSlider();
-addReviews()
+addReviews();
 
 let techMenuTitles = document.querySelectorAll(".tech__menu__title");
 
