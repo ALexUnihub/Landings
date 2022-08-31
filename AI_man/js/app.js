@@ -1,5 +1,7 @@
 'use strict'
 
+initializeSlider();
+
 let techMenuTitles = document.querySelectorAll(".tech__menu__title");
 
 for (let item of techMenuTitles) {
@@ -33,29 +35,53 @@ function chooseElem(event) {
     document.querySelector(".tech__menu").insertAdjacentHTML('afterend', itemsMap.get(itemName));
 }
 
-// ticker animation:
+// slider
+let btns = document.querySelector(".support__header__buttons");
+btns.querySelector(".left").addEventListener('click', moveLeftSlider);
+btns.querySelector(".right").addEventListener('click', moveRightSlider);
 
-// let tickerDiv = document.querySelector(".discount");
-// tickerDiv.addEventListener('mouseover', enterTicker);
-// tickerDiv.addEventListener('mouseout', leaveTicker);
+function moveLeftSlider(event) {
+    let items = document.querySelectorAll(".support__item");
+    let delta = 240;
+    let idx = 0;
 
-// function enterTicker(event) {
-//     if (!event.currentTarget.classList.contains("active")) {
-//         event.currentTarget.classList.add("active");
-//         let tickerItems = event.currentTarget.querySelectorAll('.discount__line__text');
-//         for (let item of tickerItems) {
-//             item.classList.add("active");
-//         }
-//     }
-// }
+    for (let item of items) {
+        if (idx === 0) {
+            if (parseInt(item.style.marginLeft) === 0) return;
+            if (Math.abs(parseInt(item.style.marginLeft)) < item.offsetWidth) {
+                delta = Math.abs((parseInt(item.style.marginLeft)));
+            }
+        }
+        item.style.marginLeft = parseInt(item.style.marginLeft) + delta + 'px';
+        idx++;
+    }
+}
 
-// function leaveTicker(event) {
-//     if (event.currentTarget.classList.contains("active")) {
-//         event.currentTarget.classList.remove("active");
-//         let tickerItems = event.currentTarget.querySelectorAll('.discount__line__text');
-//         for (let item of tickerItems) {
+function moveRightSlider(event) {
+    let items = Array.from(document.querySelectorAll(".support__item"));
+    let container = document.querySelector(".container");
+    let delta = 240;
+    let idx = 0;
 
-//             item.classList.remove("active");
-//         }
-//     }
-// }
+    items = items.reverse();
+
+    for (let item of items) {
+        if (idx === 0) {
+            if (Math.abs(parseInt(item.style.marginLeft)) + item.offsetWidth === container.offsetWidth) return;
+            if (Math.abs(parseInt(item.style.marginLeft)) + item.offsetWidth - delta < container.offsetWidth) {
+                delta = Math.abs(parseInt(item.style.marginLeft)) + item.offsetWidth - container.offsetWidth;
+            }
+        }
+        item.style.marginLeft = parseInt(item.style.marginLeft) - delta + 'px';
+        idx++;
+    }
+}
+
+function initializeSlider() {
+    let items = document.querySelectorAll('.support__item');
+    let idx = 0;
+    for (let item of items) {
+        item.style.marginLeft = idx * 320 + 'px';
+        idx++;
+    }
+}

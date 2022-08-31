@@ -584,3 +584,71 @@ h1,h2,h3,h4,h5,h6,p,td,tr {
 .svg__rotated {
     transform: rotate(180deg);
 }
+
+/* --------------------- Support --------------------- */
+.support__header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 100px;
+}
+.support__header__title {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 1.1;
+
+    display: flex;
+    align-items: center;
+}
+.support__header__buttons {
+    display: flex;
+}
+.support__btn {
+    width: 120px;
+    height: 120px;
+    border: none;
+    padding: 0;
+
+    background-color: #1A1A1A;
+}
+.support__btn:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+.support__btn:hover > svg > path {
+    stroke: #000;
+}
+.support__btn:nth-child(2) {
+    transform: rotate(180deg);
+}
+
+.support_items {
+    display: flex;
+    overflow: hidden;
+    height: 500px;
+
+    position: relative;
+}
+.support__item {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    transition: margin-left 250ms;
+}
+.support__item__img {
+    width: 320px;
+    height: 400px;
+}
+.support__item__text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.6;
+    text-transform: uppercase;
+
+    max-width: 320px;
+}
